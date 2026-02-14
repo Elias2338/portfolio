@@ -1,0 +1,10 @@
+├───docs
+├───src
+│   ├───cli
+│   └───core
+└───tests
+
+docs: Contains documentation like this file
+cli: for GUI
+core: save and encrypt
+tests: tests...
