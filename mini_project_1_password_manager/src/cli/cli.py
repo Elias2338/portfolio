@@ -1,10 +1,10 @@
 '''Command Line Interface for the Password Manager'''
 from core.password_entries import Passwords
+from core.save_data import save_data
 
-def main_menu():
+def main_menu(password_list, keySafe):
 
-    password_list = []
-    print("\n--- PASSWORT MANAGER ---")
+    print("\n--- LOGIN SUCCESSFUL! WELCOME ---")
 
     while True:
         print("1. Show all passwords")
@@ -56,8 +56,13 @@ def main_menu():
 
         #Finish program
         if auswahl == "4":
+            save_data(password_list, keySafe)
             print("Terminating the program...\n")
             break
 
+#Ask user for master password
+def startpage():
+    print("\n--- PASSWORT MANAGER ---\n")
+    return input("Please enter the Password: ")
 
 

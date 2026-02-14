@@ -6,8 +6,9 @@ class Passwords():
         self.username = username
         self.password = password
 
-    def toString(self):
-        return f"Daten: {self.service}, {self.username}, {self.password}"
+    def toDict(self):
+        return {"service": self.service, "username": self.username, "password": self.password}
+    
     
 
 
