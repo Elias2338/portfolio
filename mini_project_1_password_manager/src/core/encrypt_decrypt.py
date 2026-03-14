@@ -62,10 +62,5 @@ def decrypt(key, encrypted_list):
 
         return password_list
     
-    except InvalidTag:
-        return []
-    
-    except Exception as e:
-        # Für alle anderen unvorhergesehenen Fehler
-        print(f"Ein unerwarteter Fehler ist aufgetreten: {e}")
-        return []
+    except Exception:
+        raise Exception

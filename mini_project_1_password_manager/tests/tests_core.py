@@ -6,11 +6,11 @@ import tempfile
 import shutil
 
 # Füge den 'src' Ordner zum Pfad hinzu, damit wir die Module finden
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 from core.password_entries import Passwords
 from core.derive_key import deriveKey
-from core.encrypt_decrypt import KeySafe, encrypt, decrypt
+from core.encrypt_decrypt import KeySafe, decrypt
 
 class TestPasswordManagerCore(unittest.TestCase):
 
