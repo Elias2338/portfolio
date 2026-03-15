@@ -8,7 +8,6 @@ Ein lokal basierter, verschlüsselter Passwort-Manager, entwickelt mit **Python*
 | Login & Tresor-Entsperrung | Hauptmenü & Verwaltung |
 |:---:|:---:|
 | ![Login Page](./screenshots/login.png) | ![Main Menu](./screenshots/main.png) |
-*Platzhalter: Ersetze die Links oben durch deine eigenen Screenshots im Ordner `/screenshots`*
 
 ---
 
