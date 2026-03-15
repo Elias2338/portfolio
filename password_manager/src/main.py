@@ -72,4 +72,3 @@ if __name__ == "__main__":
         password_list = []
 
     main_menu(password_list, key)
-
