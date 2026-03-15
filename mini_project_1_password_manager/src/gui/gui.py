@@ -1,6 +1,7 @@
 '''Graphical User Interface for the Password Manager'''
 from core.password_entries import Passwords
 from core.save_data import save_data
+from core.generate_password import generate_password
 import customtkinter as ctk
 
 def copy_to_clipboard(root, password):
@@ -12,6 +13,11 @@ def toggle_password(label, password):
         label.configure(text=password)
     else:
         label.configure(text="*" * len(password))
+
+def set_password(password_entry):
+    password_entry.delete(0, 'end')
+    password_entry.insert(0, generate_password())
+    password_entry.configure(show="*")
 
 
 class Login_page:
@@ -97,6 +103,10 @@ def main_menu(password_list, keySafe):
 
     p_entry = ctk.CTkEntry(input_frame, placeholder_text="Password", show="*", height=35, border_color="#AADE58")
     p_entry.pack(side="left", padx=5, expand=True, fill="x")
+
+    generate_pswd_button = ctk.CTkButton(input_frame, text="🎲", width=35, height=35, fg_color="#85B33C",
+                            command=lambda: set_password(p_entry))
+    generate_pswd_button.pack(side="left", padx=5)
 
     add_btn = ctk.CTkButton(input_frame, text="+ Add", width=80, height=35, fg_color="#85B33C",
                             command=lambda: add_entry(keySafe, scrollable_frame, password_list, s_entry, u_entry, p_entry))

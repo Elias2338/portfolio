@@ -1,6 +1,5 @@
 '''main file of the Password Manager'''
 from gui.gui import main_menu, Login_page
-from cli.cli import startpage
 from core.derive_key import deriveKey
 from core.encrypt_decrypt import KeySafe
 from core.encrypt_decrypt import decrypt
